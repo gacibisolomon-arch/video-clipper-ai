@@ -1,5 +1,7 @@
 # Video Clipper AI
 
+[![License: MIT](https://shields.io)](https://opensource.org)
+
 The definitive ultra-high-performance open-source video clipping engine. Engineered for zero-latency stream downloading, context-aware smart splitting, and automated short-form generation.
 
 ## ?? Key Features
