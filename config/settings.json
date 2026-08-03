@@ -1,0 +1,6 @@
+{
+    "output_format": "mp4",
+    "default_resolution": "1080p",
+    "processing_speed": "ultra_fast",
+    "enable_ai_tracking": true
+}
