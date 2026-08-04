@@ -29,7 +29,7 @@ class VideoClipperEngine:
         output_path = f'output/{output_name}.mp4'
         print(f'[CLIP] Cutting video with sub-millisecond precision: {start_time} -> {end_time}')
         try:
-            (..ffmpeg.input(input_file, ss=start_time, to=end_time).output(output_path, c='copy').run(overwrite_output=True, capture_stdout=True, capture_stderr=True))
+            ffmpeg.input(input_file, ss=start_time, to=end_time).output(output_path, c='copy').run(overwrite_output=True, capture_stdout=True, capture_stderr=True)
             print(f'[SUCCESS] Isolated clip saved to: {output_path}')
             return output_path
         except Exception as e:
@@ -38,7 +38,6 @@ class VideoClipperEngine:
 
 if __name__ == '__main__':
     engine = VideoClipperEngine()
-    # This short link is a 15-second creative-commons video for safe, fast local testing!
     source = engine.download_stream('https://youtube.com')
     if source:
         engine.isolate_clip(source, '00:00:02', '00:00:07', 'my_first_viral_clip')
